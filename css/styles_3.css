@@ -1,0 +1,320 @@
+/* ==========================================
+     ESTILOS PARA LA TARJETA DE CONTROLES DE SIMULACIÓN
+     ========================================== 
+     - Estos estilos están diseñados para el HTML proporcionado, haciendo que sea responsive (usando % y flex para adaptarse a diferentes tamaños de pantalla).
+     - Todo está centrado donde se indica, con viñetas (círculos de color) delante de las etiquetas.
+     - Espacios en blanco: Usamos clases .spacer y .spacer-large para márgenes verticales consistentes.
+     - Colores: Rosa casi transparente (rgba con alpha bajo), viñetas en amarillo/naranja, botones neón con glow.
+     - Fuentes: Negrita donde se especifica (font-weight: bold).
+     - Responsive: Media query para móviles ajusta tamaños y paddings para mejor usabilidad.
+     - Para modificar: Ajusta valores como 'height' en spacers o 'rgba' para opacidad. */
+
+/* Estilos generales para la tarjeta: Asegura que sea responsive y con padding base */
+
+body{
+  background-image:url('../assets/super6.jpg');
+}
+
+
+.card-header {
+  text-align: center; /* Centra el header */
+  font-weight: bold; /* Negrita */
+  padding: 10px; /* Espacio interno */
+}
+
+.card-body {
+  padding: 15px; /* Espacio interno; ajusta para más/menos padding en móviles */
+  display: flex; /* Flex para alinear elementos verticalmente */
+  flex-direction: column; /* Uno debajo del otro */
+  align-items: center; /* Centra horizontalmente todo dentro del body */
+}
+
+.card-footer {
+  text-align: center; /* Centra el footer */
+  padding: 10px; /* Espacio interno */
+}
+
+/* Viñetas (círculos de color): Usadas como "status-indicator" delante de etiquetas */
+.status-indicator {
+  display: inline-block; /* Para que sea inline con el texto */
+  width: 12px; /* Tamaño de la viñeta; ajusta para más grande */
+  height: 12px; /* Altura igual para círculo perfecto */
+  border-radius: 50%; /* Hace que sea un círculo */
+  margin-right: 8px; /* Espacio entre viñeta y texto; ajusta para más separación */
+}
+
+.status-yellow {
+  background-color: yellow; /* Amarillo para "Seleccionar Categoría" y "Cantidad a Vender" */
+}
+
+.status-orange {
+  background-color: orange; /* Naranja para "Simular Venta" */
+}
+
+/* Etiquetas personalizadas: Centradas con viñeta */
+.custom-label {
+  display: flex; /* Flex para alinear viñeta y texto */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  font-weight: bold; /* Negrita */
+  font-size: 1.1rem; /* Tamaño de texto; ajusta para más grande */
+  margin: 10px 0; /* Espacio vertical alrededor */
+  width: 100%; /* Ancho completo para centrado */
+  text-align: center; /* Asegura centrado del texto */
+}
+
+.centered {
+  text-align: center; /* Clase adicional para centrado (redundante pero para compatibilidad) */
+}
+
+/* Dropdowns: Rosa casi transparente, negrita, ancho completo */
+.dropdown-pink {
+  background-color: rgba(
+    255,
+    192,
+    203,
+    0.3
+  ); /* Rosa casi transparente (ajusta alpha 0.3 para más transparencia) */
+  border: 1px solid pink; /* Borde rosa para definición */
+  width: 100%; /* Ancho completo del cuadro */
+  padding: 10px; /* Espacio interno */
+  font-weight: bold; /* Negrita para el texto */
+  font-size: 1rem; /* Tamaño de texto */
+  margin: 10px 0; /* Espacio vertical */
+  border-radius: 5px; /* Bordes redondeados opcional */
+}
+
+/* Espacios en blanco: Divs vacíos para márgenes verticales */
+.spacer {
+  height: 20px; /* Espacio estándar; ajusta para más/menos blanco */
+  width: 100%; /* Ancho completo */
+}
+
+.spacer-large {
+  height: 30px; /* Espacio más grande; ajusta para más separación */
+  width: 100%;
+}
+
+/* Cargando productos: Centrado */
+#productTableContainer .loading {
+  text-align: center; /* Centrado */
+  font-size: 1rem; /* Tamaño */
+  margin: 10px 0; /* Espacio vertical */
+}
+
+/* Input para cantidad: Ancho completo */
+.input-number {
+  width: 100%; /* Todo a lo ancho del cuadro */
+  padding: 10px; /* Espacio interno */
+  font-size: 1rem; /* Tamaño */
+  border: 1px solid gray; /* Borde gris por defecto; ajusta color */
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 10px 0; /* Espacio vertical */
+}
+
+/* Grupo de botones: Dos botones lado a lado, neón con glow */
+.button-group {
+  display: flex; /* Flex para alinear botones horizontalmente */
+  justify-content: space-between; /* Espacio entre botones */
+  width: 100%; /* Ancho completo */
+  margin: 10px 0; /* Espacio vertical */
+}
+
+.btn-neon-green {
+  background-color: #00ff00; /* Verde neón */
+  color: black; /* Texto oscuro para contraste */
+  border: 2px solid #00cc00; /* Borde verde oscuro */
+  padding: 10px; /* Espacio interno */
+  font-weight: bold; /* Negrita */
+  font-size: 1rem; /* Tamaño */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Mano al hover */
+  box-shadow: 0 0 10px #00ff00; /* Glow inicial */
+  transition: box-shadow 0.3s ease; /* Transición suave */
+  flex: 1; /* Ocupa espacio igual */
+  margin-right: 5px; /* Espacio entre botones */
+}
+
+.btn-neon-green:hover {
+  box-shadow: 0 0 20px #00ff00; /* Glow más intenso al hover */
+}
+
+.btn-neon-blue {
+  background-color: #00bfff; /* Azul neón */
+  color: black; /* Texto oscuro */
+  border: 2px solid #0099cc; /* Borde azul oscuro */
+  padding: 10px; /* Espacio interno */
+  font-weight: bold; /* Negrita */
+  font-size: 1rem; /* Tamaño */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Mano al hover */
+  box-shadow: 0 0 10px #00bfff; /* Glow inicial */
+  transition: box-shadow 0.3s ease; /* Transición suave */
+  flex: 1; /* Ocupa espacio igual */
+}
+
+.btn-neon-blue:hover {
+  box-shadow: 0 0 20px #00bfff; /* Glow más intenso al hover */
+}
+
+/* ==========================================
+     MEDIA QUERIES PARA RESPONSIVIDAD
+     ========================================== 
+     - Para pantallas pequeñas (<768px): Stack botones verticalmente, reduce tamaños para móviles. */
+@media (max-width: 768px) {
+  .card-rojo-transparente {
+    max-width: 100%; /* Ancho completo en móviles */
+  }
+
+  .button-group {
+    flex-direction: column; /* Stack botones uno sobre otro */
+    align-items: center; /* Centra */
+  }
+
+  .btn-neon-green,
+  .btn-neon-blue {
+    width: 100%; /* Ancho completo en móviles */
+    margin: 5px 0; /* Espacio vertical entre botones */
+  }
+
+  .custom-label {
+    font-size: 1rem; /* Reduce tamaño de texto */
+  }
+
+  .dropdown-pink {
+    font-size: 0.9rem; /* Reduce en móviles */
+  }
+
+  .input-number {
+    font-size: 0.9rem; /* Reduce */
+  }
+}
+
+/* ==========================================
+     MI CODIGO
+     ========================================== 
+     - . */
+
+.status-active {
+  background-color: #edc114;
+}
+.status-warning {
+  background-color: #ff8400;
+}
+.status-danger {
+  background-color: #dc3545;
+}
+
+/* Círculo amarillo */
+.status-indicator.status-yellow {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: yellow;
+  margin-right: 8px;
+}
+
+.metric-card {
+  flex: 1;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  text-align: center;
+  margin: 0;
+  min-width: 150px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#balancerMetrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 1rem;
+}
+
+.metric-card {
+  flex: 1;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.metric-card {
+  background: #e0c0972d;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px #e0c09733;
+  border: 1px solid #baa17934;
+  margin-bottom: 8px;
+}
+.metric-card h5 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.metric-card span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #7c591428;
+  display: block;
+}
+.chart-container {
+  position: relative;
+  height: 400px;
+  margin: 25px 0;
+  background: #fdeedc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px #e0c097d2;
+}
+
+/* Tablas y resultados */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 13px;
+  background: #3b3a39;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px #e0c09766;
+}
+.product-table th,
+.product-table td {
+  border: 1px solid #6b4410;
+  padding: 12px 8px;
+  text-align: center;
+}
+.product-table th {
+  background: #d4ae71;
+  color: #7c5a14;
+  font-weight: 600;
+  font-size: 12px;
+}
+.product-table tr:nth-child(even) {
+  background-color: #796c6c;
+}
+.product-table tr:hover {
+  background-color: #532424;
+  transition: background-color 0.3s ease;
+}
+.results {
+  background: #000000;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #6b6864;
+}
+.results h4 {
+  color: #702323;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}

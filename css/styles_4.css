@@ -1,0 +1,399 @@
+/* ========================================
+   ESTILOS PRINCIPALES PARA SIMULACIÓN MAPA
+   ======================================== */
+
+/* Fondo con patrón diagonal igual a otros simuladores */
+body {
+  font-family: Arial, sans-serif;
+  background: repeating-linear-gradient(
+    135deg,
+    #111,
+    #111 32px,
+    #181821 32px,
+    #181821 64px
+  );
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.features-section-3 {
+  background-image: url("../assets/super4.jpg");
+}
+
+/* ========================================
+     TARJETA PRINCIPAL DE SIMULACIÓN
+     ======================================== */
+.simulation-card {
+  max-width: 800px;
+  margin: 40px auto;
+  border: 1px solid #b0caf0;
+  box-shadow: 0 8px 30px #15172244;
+  padding: 36px 36px 30px 36px;
+  border-radius: 16px;
+  background-color: #f9e7d34d;
+}
+
+/* Título principal en negrita */
+.main-title {
+  color: rgb(255, 255, 255);
+  font-size: 1.46rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* Layout principal del contenido */
+.simulation-content {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* ========================================
+     PANEL DE CONTROLES
+     ======================================== */
+.controles {
+  flex: 1;
+  min-width: 210px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 23px 18px 18px 18px;
+  border-radius: 12px;
+  border: 1px solid #d1bfa3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========================================
+     PRODUCTOS ARRASTRABLES CON COLORES ESPECÍFICOS
+     ======================================== */
+.product-palette {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+/* Base para productos arrastrables */
+.draggable-product {
+  padding: 8px;
+  color: white;
+  border-radius: 4px;
+  cursor: grab;
+  user-select: none;
+  text-align: center;
+  font-weight: bold;
+  width: 130px;
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Producto violeta con efecto fluorescente */
+.product-violet {
+  background: linear-gradient(135deg, #8e44ad, #9b59b6);
+  box-shadow: 0 0 20px rgba(142, 68, 173, 0.6);
+}
+
+.product-violet:hover {
+  box-shadow: 0 0 30px rgba(142, 68, 173, 0.8);
+  transform: translateY(-2px);
+}
+
+/* Producto violeta con efecto fluorescente */
+.product-gray {
+  background: linear-gradient(135deg, #5097e9, #5d9bec);
+  box-shadow: 0 0 20px rgba(5, 151, 236, 0.6);
+}
+
+.product-gray:hover {
+  box-shadow: 0 0 30px rgba(5, 151, 236, 0.8);
+  transform: translateY(-2px);
+}
+
+/* Producto azul con efecto fluorescente */
+.product-blue {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.6);
+}
+
+.product-blue:hover {
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.8);
+  transform: translateY(-2px);
+}
+
+/* Producto naranja con efecto fluorescente */
+.product-orange {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.6);
+}
+
+.product-orange:hover {
+  box-shadow: 0 0 30px rgba(243, 156, 18, 0.8);
+  transform: translateY(-2px);
+}
+
+.draggable-product:active {
+  transform: scale(0.95);
+}
+
+/* ========================================
+     BOTONES CON ESTILOS ESPECÍFICOS
+     ======================================== */
+
+/* Botón simular tráfico - azul con fluorescencia */
+.btn-simulate {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 10px 14px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  user-select: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
+
+.btn-simulate:hover {
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+/* Botón resetear - rojo con fluorescencia */
+.btn-reset {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 10px 14px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+  user-select: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(220, 53, 69, 0.5);
+}
+
+.btn-reset:hover {
+  box-shadow: 0 0 25px rgba(220, 53, 69, 0.8);
+  transform: translateY(-2px);
+}
+
+/* Botón optimizar - verde con fluorescencia */
+.btn-optimize {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 10px 14px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: white;
+  user-select: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.5);
+}
+
+.btn-optimize:hover {
+  box-shadow: 0 0 25px rgba(40, 167, 69, 0.8);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+     LAYOUT DEL PASILLO Y ZONAS
+     ======================================== */
+.aisle-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  gap: 12px;
+  position: relative;
+  margin-bottom: 10px;
+  background: none;
+}
+
+.aisle-zone {
+  border: 2px dashed #666;
+  border-radius: 7px;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+  padding-top: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 6px;
+}
+
+.aisle-zone.dragover {
+  border-color: #007bff;
+  background-color: #e0f0ff;
+}
+
+.aisle-zone .placed-product {
+  background: #28a745;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 0.88em;
+  cursor: default;
+  user-select: none;
+  width: 55px;
+  height: 30px;
+  line-height: 22px;
+  text-align: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ========================================
+     PANEL DE RESULTADOS
+     ======================================== */
+.results {
+  flex: 1;
+  position: relative;
+}
+
+/* Explicación con línea azul lateral */
+.explanation {
+  font-size: 0.99em;
+  color: #555;
+  margin-top: 10px;
+  background: #efe1c3bb;
+  border-radius: 6px;
+  padding: 10px 15px;
+  border-left: 4px solid #007bff;
+  padding-left: 19px;
+}
+
+/* ========================================
+     SISTEMA DE NOTIFICACIONES TOAST
+     ======================================== */
+.toast-container {
+  position: fixed;
+  top: 22px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toast {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 270px;
+  max-width: 380px;
+  font-size: 15px;
+  line-height: 1.4;
+  transform: translateX(400px);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0;
+  border-left: 4px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.toast.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.toast.success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.toast.error {
+  background: linear-gradient(135deg, #ff512f 0%, #dd2476 100%);
+}
+
+.toast.warning {
+  background: linear-gradient(135deg, #ffb347 0%, #ffcc33 100%);
+  color: #333;
+}
+
+.toast-header {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toast-body {
+  font-weight: normal;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-close:hover {
+  color: white;
+}
+
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0 0 8px 8px;
+  transition: width linear;
+}
+
+/* ========================================
+     RESPONSIVE DESIGN
+     ======================================== */
+@media (max-width: 1000px) {
+  .simulation-content {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .simulation-card {
+    padding: 20px 7vw;
+  }
+
+  .aisle-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 90px);
+    gap: 10px;
+  }
+
+  .draggable-product {
+    width: 95vw;
+    min-width: 92vw;
+  }
+}

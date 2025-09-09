@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- ==========================================
+         CONFIGURACIÓN BÁSICA DEL DOCUMENTO
+         ========================================== -->
+
+    <!-- Codificación de caracteres UTF-8 para soporte completo de caracteres especiales -->
+    <meta charset="UTF-8" />
+
+    <!-- Configuración del viewport para diseño responsive -->
+    <!-- width=device-width: Ajusta el ancho al dispositivo -->
+    <!-- initial-scale=1.0: Establece el zoom inicial al 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Compatibilidad con Internet Explorer (Edge mode) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- ==========================================
+         META TAGS PARA SEO Y REDES SOCIALES
+         ========================================== -->
+
+    <!-- Título de la página (aparece en la pestaña del navegador) -->
+    <title>Tu Página Web Responsive | Título Descriptivo</title>
+
+    <!-- Descripción de la página para motores de búsqueda (máximo 160 caracteres) -->
+    <meta
+      name="description"
+      content="Descripción concisa y atractiva de tu página web que aparecerá en los resultados de búsqueda de Google"
+    />
+
+    <!-- Palabras clave relacionadas con el contenido de la página -->
+    <meta
+      name="keywords"
+      content="palabra1, palabra2, palabra3, responsive, web"
+    />
+
+    <!-- Autor del sitio web -->
+    <meta name="author" content="Tu Nombre o Empresa" />
+
+    <!-- Robots: Instrucciones para los motores de búsqueda -->
+    <!-- index: Permite indexar la página -->
+    <!-- follow: Permite seguir los enlaces de la página -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- URL canónica para evitar contenido duplicado -->
+    <link rel="canonical" href="https://tudominio.com/" />
+
+    <!-- ==========================================
+         META TAGS OPEN GRAPH (FACEBOOK)
+         ========================================== -->
+
+    <!-- Tipo de contenido (website, article, etc.) -->
+    <meta property="og:type" content="website" />
+
+    <!-- Título para redes sociales -->
+    <meta
+      property="og:title"
+      content="Tu Página Web Responsive | Título para Redes Sociales"
+    />
+
+    <!-- Descripción para redes sociales -->
+    <meta
+      property="og:description"
+      content="Descripción atractiva que aparecerá cuando compartan tu página en redes sociales"
+    />
+
+    <!-- URL de la página -->
+    <meta property="og:url" content="https://tudominio.com/" />
+
+    <!-- Imagen que aparecerá al compartir (recomendado: 1200x630px) -->
+    <meta
+      property="og:image"
+      content="https://tudominio.com/images/og-image.jpg"
+    />
+
+    <!-- Nombre del sitio web -->
+    <meta property="og:site_name" content="Nombre de tu Sitio Web" />
+
+    <!-- Idioma del contenido -->
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- ==========================================
+         META TAGS TWITTER CARD
+         ========================================== -->
+
+    <!-- Tipo de tarjeta de Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Usuario de Twitter del sitio -->
+    <meta name="twitter:site" content="@tuusuario" />
+
+    <!-- Usuario de Twitter del creador -->
+    <meta name="twitter:creator" content="@tuusuario" />
+
+    <!-- Título para Twitter -->
+    <meta name="twitter:title" content="Tu Página Web Responsive" />
+
+    <!-- Descripción para Twitter -->
+    <meta name="twitter:description" content="Descripción para Twitter Card" />
+
+    <!-- Imagen para Twitter Card -->
+    <meta
+      name="twitter:image"
+      content="https://tudominio.com/images/twitter-image.jpg"
+    />
+
+    <!-- ==========================================
+         FAVICON Y ICONOS PARA DISPOSITIVOS
+         ========================================== -->
+
+    <!-- Favicon estándar (ICO format) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Favicon PNG para navegadores modernos -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <!-- Apple Touch Icon para dispositivos iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Icono para Android Chrome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/android-chrome-512x512.png"
+    />
+
+    <!-- Manifest para PWA (Progressive Web App) -->
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Color del tema para la barra de navegación en móviles -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Color de la barra de estado en Safari (iOS) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- ==========================================
+         HOJAS DE ESTILOS CSS
+         ========================================== -->
+
+    <!-- Bootstrap CSS desde CDN para componentes y grid responsive -->
+    <!-- Versión 5.3.2 (puedes actualizar a la versión más reciente) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Iconos de Bootstrap (opcional pero recomendado) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Hoja de estilos personalizada -->
+    <!-- Se carga después de Bootstrap para permitir sobrescribir estilos -->
+    <link rel="stylesheet" href="css/styles_1.css" />
+
+    <!-- ==========================================
+         PRELOAD Y PREFETCH PARA OPTIMIZACIÓN
+         ========================================== -->
+
+    <!-- DNS prefetch para dominios externos -->
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  </head>
+
+  <body>
+    <!-- ==========================================
+         NAVEGACIÓN PRINCIPAL HIPERIÓN
+         ========================================== -->
+    <nav class="navbar navbar-expand-lg navbar-hiperion fixed-top">
+      <div class="container-fluid">
+        <!-- Sección izquierda: Logo y Brand -->
+        <div class="navbar-brand-container">
+          <div class="logo-container">
+            <img
+              src="assets/Hiperion.png"
+              alt="Logo HIPERIÓN"
+              class="navbar-logo"
+            />
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">HIPERIÓN</h1>
+            <p class="brand-subtitle">el supermercado que se ajusta solo</p>
+          </div>
+        </div>
+
+        <!-- Botón hamburguesa para móviles -->
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarHiperion"
+          aria-controls="navbarHiperion"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon-custom">
+            <i class="bi bi-list"></i>
+          </span>
+        </button>
+
+        <!-- Sección derecha: Menú de navegación -->
+        <div class="collapse navbar-collapse" id="navbarHiperion">
+          <ul class="navbar-nav ms-auto">
+            <!-- Botón Video -->
+            <li class="nav-item">
+              <a class="nav-link nav-btn-custom" href="video.html">
+                <i class="bi bi-play-circle nav-icon"></i>
+                <span class="nav-text">Video</span>
+              </a>
+            </li>
+
+            <!-- Dropdown Simulación -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle nav-btn-custom"
+                href="#"
+                id="simulacionDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-gear nav-icon"></i>
+                <span class="nav-text">Simulación</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-custom"
+                aria-labelledby="simulacionDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="simulacionbasica.html"
+                    ><i class="bi bi-calculator"></i> Simulación Básica</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="simulacioncompleja.html"
+                    ><i class="bi bi-cpu"></i> Simulación Avanzada</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="simulacionmapa.html"
+                    ><i class="bi bi-bar-chart"></i> Comparador de Precios</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+              </ul>
+            </li>
+
+            <!-- Botón Contacto -->
+            <li class="nav-item">
+              <a class="nav-link nav-btn-custom" href="#contacto">
+                <i class="bi bi-envelope nav-icon"></i>
+                <span class="nav-text">Contacto</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Espaciador para compensar navbar fixed -->
+    <div class="navbar-spacer"></div>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <!-- Sección de tarjetas con modales -->
+      <section class="py-5 bg-light features-section">
+        <div class="container">
+          <h2 class="text-center mb-5">Transforme su experiencia de mercado</h2>
+          <div class="row justify-content-center">
+            <!-- Tarjeta 1: Etiquetas Electrónicas -->
+            <div class="col-md-4 mb-4">
+              <div
+                class="card custom-card"
+                data-bs-toggle="modal"
+                data-bs-target="#modal1"
+              >
+                <img
+                  src="assets/im1.jpeg"
+                  class="card-img-top"
+                  alt="Etiquetas Electrónicas"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Etiquetas Electrónicas</h5>
+                  <p class="card-text">Actualización de precios inmediata</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta 2: Control Central -->
+            <div class="col-md-4 mb-4">
+              <div
+                class="card custom-card"
+                data-bs-toggle="modal"
+                data-bs-target="#modal2"
+              >
+                <img
+                  src="assets/im2.jpeg"
+                  class="card-img-top"
+                  alt="Control Central"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Control Central</h5>
+                  <p class="card-text">
+                    Gestión centralizada de inventarios y ventas
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta 3: Mapa de Calor -->
+            <div class="col-md-4 mb-4">
+              <div
+                class="card custom-card"
+                data-bs-toggle="modal"
+                data-bs-target="#modal3"
+              >
+                <img
+                  src="assets/im3.jpeg"
+                  class="card-img-top"
+                  alt="Mapa de Calor"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Mapa de Calor</h5>
+                  <p class="card-text">Ubicación de productos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modales para tarjetas -->
+      <div
+        class="modal fade"
+        id="modal1"
+        tabindex="-1"
+        aria-labelledby="modal1Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal1Label">
+                Etiquetas Electrónicas en HIPERIÓN
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="assets/im1.jpeg"
+                class="img-fluid mb-3 rounded"
+                alt="Detalle Etiquetas Electrónicas"
+              />
+              <p>
+                Las etiquetas electrónicas de Hiperión son una solución
+                innovadora para supermercados que permite actualizar precios y
+                promociones en tiempo real. Gracias a la integración con nuestro
+                sistema de control central, estas etiquetas aseguran una
+                comunicación constante y fluida entre el inventario y los
+                precios exhibidos. Esto no solo optimiza la gestión de precios,
+                sino que también mejora la experiencia del cliente al eliminar
+                errores de precios y asegurando la correcta rotación de
+                productos. Con un diseño moderno y fácil de leer, las etiquetas
+                son una herramienta indispensable si se busca eficiencia y
+                precisión.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modal2"
+        tabindex="-1"
+        aria-labelledby="modal2Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal2Label">
+                Sistema de Control Central
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="assets/im2.jpeg"
+                class="img-fluid mb-3 rounded"
+                alt="Detalle Control Central"
+              />
+              <p>
+                El sistema de control central de Hiperión es la columna
+                vertebral de la gestión de supermercados. Integra inteligencia
+                artificial, visión por computadora e IoT para permitir una
+                supervisión y trazabilidad completas. Este sistema no solo
+                facilita la sincronización de etiquetas electrónicas, sino que
+                también permite simulaciones y ajustes en tiempo real, lo que
+                resulta en una optimización continua de la rotación de
+                productos. Ideal para gerentes de supermercado, este sistema
+                garantiza que cada decisión esté respaldada por datos precisos,
+                mejorando la eficiencia operativa y aumentando la satisfacción
+                del cliente.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modal3"
+        tabindex="-1"
+        aria-labelledby="modal3Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal3Label">
+                Mapa de Calor en HIPERIÓN
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="assets/im3.jpeg"
+                class="img-fluid mb-3 rounded"
+                alt="Detalle Mapa de Calor"
+              />
+              <p>
+                El motor de precios dinámicos de Hiperión ajusta automáticamente
+                los precios en función de la oferta y la demanda, lo que ayuda a
+                reducir quiebres y mermas en el inventario. Este sistema es
+                esencial para supermercados que buscan maximizar sus márgenes de
+                ganancia mientras ofrecen precios competitivos a sus clientes.
+                Al utilizar algoritmos avanzados, el motor puede predecir
+                cambios en la demanda y ajustar los precios en consecuencia,
+                asegurando que siempre se mantenga un equilibrio entre la
+                rentabilidad y la satisfacción del cliente. Una herramienta
+                poderosa para optimizar las ventas y la gestión de inventarios.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de tarjetas horizontales con modals -->
+      <section class="py-5 bg-light steps-section">
+        <div class="container">
+          <h2 class="text-center mb-5">
+            Optimizar tu Supermercado al instante
+          </h2>
+          <div class="row justify-content-center">
+            <!-- Tarjeta 1: Paso 1 -->
+            <div class="col-md-6 mb-4">
+              <div
+                class="card custom-horizontal-card"
+                data-bs-toggle="modal"
+                data-bs-target="#modalH1"
+              >
+                <div class="row g-0">
+                  <div class="col-4">
+                    <img
+                      src="assets/ig4.jpeg"
+                      class="img-fluid rounded-start card-horizontal-img"
+                      alt="Integración de IA"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Paso 1: Integración de IA</h5>
+                      <p class="card-text">
+                        Optimización automática con inteligencia artificial.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta 2: Paso 2 -->
+            <div class="col-md-6 mb-4">
+              <div
+                class="card custom-horizontal-card"
+                data-bs-toggle="modal"
+                data-bs-target="#modalH2"
+              >
+                <div class="row g-0">
+                  <div class="col-4">
+                    <img
+                      src="assets/ig3.jpeg"
+                      class="img-fluid rounded-start card-horizontal-img"
+                      alt="Configuración de Etiquetas Electrónicas"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Paso 2: Configuración de etiquetas electrónicas
+                      </h5>
+                      <p class="card-text">
+                        Sincronización rápida para actualizar precios
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta 3: Paso 3 -->
+            <div class="col-md-6 mb-4">
+              <div
+                class="card custom-horizontal-card"
+                data-bs-toggle="modal"
+                data-bs-target="#modalH3"
+              >
+                <div class="row g-0">
+                  <div class="col-4">
+                    <img
+                      src="assets/ig2.jpeg"
+                      class="img-fluid rounded-start card-horizontal-img"
+                      alt="Monitoreo en Tiempo Real"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Paso 3: Monitoreo en Tiempo Real
+                      </h5>
+                      <p class="card-text">
+                        Supervisión de inventarios con alertas
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta 4: Paso 4 -->
+            <div class="col-md-6 mb-4">
+              <div
+                class="card custom-horizontal-card"
+                data-bs-toggle="modal"
+                data-bs-target="#modalH4"
+              >
+                <div class="row g-0">
+                  <div class="col-4">
+                    <img
+                      src="assets/ig1.jpeg"
+                      class="img-fluid rounded-start card-horizontal-img"
+                      alt="Ajustes de Precios Dinámicos"
+                    />
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Paso 4: Ajustes de Precios Dinámicos
+                      </h5>
+                      <p class="card-text">Cambios automáticos de precios</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modales para tarjetas horizontales -->
+      <div
+        class="modal fade"
+        id="modalH1"
+        tabindex="-1"
+        aria-labelledby="modalH1Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalH1Label">
+                Paso 1: Integración de IA en HIPERIÓN
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="assets/ig4.jpeg"
+                class="img-fluid mb-3 rounded"
+                alt="Detalle Integración de IA"
+              />
+              <p>
+                Iniciamos el proceso integrando nuestra inteligencia artificial
+                en el sistema del supermercado. Esto implica analizar los datos
+                existentes y establecer parámetros que optimicen la gestión de
+                inventarios y precios. La IA permite predecir patrones de compra
+                y ajustar la oferta en tiempo real. Este paso es crucial para
+                garantizar una sincronización efectiva entre los productos
+                disponibles y las expectativas de los clientes. Trabajamos
+                estrechamente con el equipo del supermercado para configurar la
+                IA de manera que se adapte a sus necesidades específicas y les
+                brinde una ventaja competitiva significativa.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modalH2"
+        tabindex="-1"
+        aria-labelledby="modalH2Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalH2Label">
+                Paso 2: Configuración de Etiquetas Electrónicas
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="assets/ig3.jpeg"
+                class="img-fluid mb-3 rounded"
+                alt="Detalle Configuración de Etiquetas"
+              />
+              <p>
+                A continuación, configuramos las etiquetas electrónicas que se
+                sincronizarán con el centro de control. Estas etiquetas no solo
+                mostrarán precios dinámicos, sino que también permitirán un
+                seguimiento de la trazabilidad de los productos. La instalación
+                de las etiquetas se realiza de manera efectiva para que cada
+                producto esté correctamente etiquetado y conectado al sistema
+                central. Esto asegura que cada cambio de precio o promoción se
+                implemente instantáneamente, mejorando la experiencia de compra
+                para los clientes y facilitando la gestión para el personal del
+                supermercado.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modalH3"
+        tabindex="-1"
+        aria-labelledby="modalH3Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalH3Label">
+                Paso 3: Monitoreo en Tiempo Real
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="assets/ig2.jpeg"
+                class="img-fluid mb-3 rounded"
+                alt="Detalle Monitoreo en Tiempo Real"
+              />
+              <p>
+                Implementamos un sistema de monitoreo en tiempo real que permite
+                supervisar el rendimiento de las góndolas y la rotación de
+                productos. Este sistema proporciona datos valiosos sobre la
+                disponibilidad de inventarios y las tendencias de compra.
+                Gracias a la visión por computadora, podemos identificar
+                rápidamente cualquier problema y realizar ajustes necesarios.
+                Esto no solo reduce los quiebres y las mermas, sino que también
+                optimiza la experiencia de compra al garantizar que los
+                productos estén siempre disponibles y bien presentados en las
+                góndolas.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modalH4"
+        tabindex="-1"
+        aria-labelledby="modalH4Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalH4Label">
+                Paso 4: Ajustes de Precios Dinámicos
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                src="assets/ig1.jpeg"
+                class="img-fluid mb-3 rounded"
+                alt="Detalle Ajustes de Precios"
+              />
+              <p>
+                Finalmente, nuestra plataforma ajusta los precios de manera
+                dinámica para reflejar la demanda y la oferta del mercado. Este
+                proceso involucra el análisis constante de datos y la adaptación
+                de precios en función de las tendencias de compra. El motor de
+                precios de Hiperión asegura que los precios sean competitivos y
+                justos, lo que resulta en una mejor experiencia de compra y
+                mayor satisfacción del cliente. Además, esto ayuda a maximizar
+                las ventas y minimizar las pérdidas, asegurando la rentabilidad
+                del supermercado.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de contáctenos -->
+      <section id="contacto" class="contact-section py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Contáctenos</h2>
+          <div class="row justify-content-center">
+            <!-- Card 1: Email -->
+            <div class="col-md-6 mb-4">
+              <div class="contact-card">
+                <div class="card-icon">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <h5 class="card-title">Envíanos un Email</h5>
+                <p class="card-text">
+                  Para consultas generales o soporte, escríbenos a
+                  <a href="mailto:info@hiperion.com">info@hiperion.com</a>.
+                  Responderemos en menos de 24 horas.
+                </p>
+                <button
+                  class="neon-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contactModal1"
+                >
+                  Contactar Ahora
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2: Teléfono -->
+            <div class="col-md-6 mb-4">
+              <div class="contact-card">
+                <div class="card-icon">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <h5 class="card-title">Llámanos</h5>
+                <p class="card-text">
+                  Habla con nuestro equipo al +1 (123) 456-7890. Disponible de
+                  Lunes a Viernes, 9am - 6pm.
+                </p>
+                <button
+                  class="neon-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contactModal2"
+                >
+                  Llamar Ahora
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3: Dirección -->
+            <div class="col-md-6 mb-4">
+              <div class="contact-card">
+                <div class="card-icon">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <h5 class="card-title">Visítanos</h5>
+                <p class="card-text">
+                  Encuéntranos en Calle Principal 123, Ciudad, País. Abierto de
+                  8am a 8pm todos los días.
+                </p>
+                <button
+                  class="neon-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contactModal3"
+                >
+                  Ver Mapa
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 4: Mensaje -->
+            <div class="col-md-6 mb-4">
+              <div class="contact-card">
+                <div class="card-icon">
+                  <i class="bi bi-chat-dots-fill"></i>
+                </div>
+                <h5 class="card-title">Envía un Mensaje</h5>
+                <p class="card-text">
+                  Usa nuestro formulario rápido para enviarnos un mensaje
+                  directo sobre HIPERIÓN.
+                </p>
+                <button
+                  class="neon-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contactModal4"
+                >
+                  Enviar Mensaje
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modales para contáctenos -->
+      <div
+        class="modal fade"
+        id="contactModal1"
+        tabindex="-1"
+        aria-labelledby="contactModal1Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModal1Label">
+                Envíanos un Email
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Detalles para contacto por email: info@hiperion.com</p>
+              <form>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Tu Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="tuemail@ejemplo.com"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea
+                    class="form-control"
+                    id="mensaje"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="contactModal2"
+        tabindex="-1"
+        aria-labelledby="contactModal2Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModal2Label">Llámanos</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Número de teléfono: +1 (123) 456-7890</p>
+              <p>Horario: Lunes a Viernes, 9am - 6pm.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="contactModal3"
+        tabindex="-1"
+        aria-labelledby="contactModal3Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModal3Label">Visítanos</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Dirección: Calle Principal 123, Ciudad, País</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019057!2d-122.4194155!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808581c5583c3d0d%3A0x3b1d7a0e3a3b3b3b!2sGoogleplex!5e0!3m2!1sen!2sus!4v1633023456789"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="contactModal4"
+        tabindex="-1"
+        aria-labelledby="contactModal4Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModal4Label">
+                Envía un Mensaje
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    placeholder="Tu Nombre"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="emailForm" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailForm"
+                    placeholder="tuemail@ejemplo.com"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="mensajeForm" class="form-label">Mensaje</label>
+                  <textarea
+                    class="form-control"
+                    id="mensajeForm"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ==========================================
+         PIE DE PÁGINA HIPERIÓN
+         ========================================== -->
+    <footer class="footer-hiperion">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <!-- Sección izquierda: Logo y Brand -->
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="footer-brand-container">
+              <div class="footer-logo-container">
+                <img
+                  src="assets/Hiperion.png"
+                  alt="Logo HIPERIÓN"
+                  class="footer-logo"
+                />
+              </div>
+              <div class="footer-brand-text">
+                <h3 class="footer-brand-title">HIPERIÓN</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección derecha: Redes Sociales -->
+          <div class="col-md-4 text-md-end">
+            <div
+              class="footer-social d-flex justify-content-center justify-content-md-end gap-3"
+            >
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row mt-4">
+          <div class="col text-center">
+            <p class="footer-copyright">
+              © 4045 HIPERIÓN - Todos los derechos reservados.
+            </p>
+            <p class="footer-quote">
+              "El futuro no es esperar clientes, es anticipar cada compra"
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script personalizado -->
+    <script src="js/scripts_1.js"></script>
+  </body>
+</html>

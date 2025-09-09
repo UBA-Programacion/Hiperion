@@ -1,0 +1,377 @@
+/* ==========================================
+     ESTILOS GENERALES Y RESPONSIVOS
+     ========================================== 
+     - Fuentes: Arial para consistencia (puedes cambiar a Google Fonts agregando @import).
+     - Colores: Basados en el CSS proporcionado; ajusta hex codes (ej. rojo: #ff0000).
+     - Responsividad: Media queries para móviles (<768px) ajustan tamaños, paddings y alineaciones.
+     - Para modificar: Busca secciones por nombre y ajusta valores numéricos (ej. font-size). */
+
+/* Reset básico para consistencia cross-browser (evita márgenes/paddings inesperados) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Incluye padding/border en el tamaño total de elementos */
+}
+
+/* Estilos para body: Fuente base y fondo por defecto */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Fondo claro por defecto; cambia para temas oscuros */
+  color: #333; /* Color de texto principal; ajusta para contraste */
+}
+
+/* ==========================================
+     NAVBAR HIPERIÓN
+     ========================================== 
+     - Fixed-top: Siempre visible en la parte superior.
+     - Responsive: Colapsa en móviles; ajusta tamaños en media query. 
+     - Para modificar: Cambia background-color para colores personalizados. */
+.navbar-hiperion {
+  background-color: #ff0000; /* Rojo delicado; ajusta hex */
+  padding: 10px; /* Espacio interno; aumenta para más altura */
+}
+
+.navbar-brand-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente logo y texto */
+}
+
+.navbar-logo {
+  width: 50px; /* Tamaño del logo; ajusta para responsividad */
+  height: auto;
+}
+
+.brand-title {
+  font-size: 1.5rem; /* Tamaño del título; bold por defecto */
+  font-weight: bold;
+  margin: 0 10px; /* Espacio horizontal */
+}
+
+.brand-subtitle {
+  font-size: 1rem; /* Tamaño del subtítulo */
+  margin: 0;
+}
+
+.nav-btn-custom {
+  display: flex;
+  align-items: center; /* Alinea icono y texto */
+  gap: 5px; /* Espacio entre icono y texto */
+}
+
+.dropdown-custom {
+  background-color: rgba(15,23,42,0.95); /* Fondo del dropdown; ajusta para temas oscuros */
+}
+
+/* Espaciador para navbar fixed (evita que el contenido se solape con la navbar) */
+.navbar-spacer {
+  height: 80px; /* Ajusta según la altura real de la navbar (mide en dev tools) */
+}
+
+/* ==========================================
+     SECCIÓN DE SIMULACIÓN Y TARJETAS
+     ========================================== 
+     - Fondo negro con imagen para .features-section-2.
+     - Línea decorativa en párrafos y títulos.
+     - Cards: Transparencia y bordes; responsive para stack en móviles.
+     - Para modificar: Cambia opacidad en rgba() o colores de bordes. */
+
+/* Sección de características: Fondo con imagen (super2.jpg); cubre todo y centra */
+.features-section-2 {
+  background-image: url("../assets/super2.jpg"); /* Ruta a la imagen; ajusta si es externa */
+  background-size: cover; /* Cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+}
+
+/* Párrafo con línea azul (vertical a la izquierda) */
+.paragraph-with-line {
+  position: relative; /* Para posicionar la línea absoluta */
+  padding-left: 20px; /* Espacio para la línea; ajusta para más/menos indentación */
+  max-width: 600px; /* Ancho máximo; ajusta para responsividad */
+  margin: 0 auto; /* Centra el párrafo */
+  text-align: left; /* Alineación del texto */
+}
+
+/* Línea azul vertical (usando ::after para pseudo-elemento) */
+.paragraph-with-line::after {
+  content: ""; /* Contenido vacío para la línea */
+  position: absolute; /* Posiciona relativa al párrafo */
+  left: 0; /* Pegada a la izquierda */
+  top: 0; /* Desde la parte superior */
+  height: 100%; /* Cubre toda la altura del párrafo */
+  width: 2px; /* Grosor de la línea; ajusta a 3px para más visibilidad */
+  background-color: blue; /* Color azul; cambia a hex (ej. #0000ff) */
+}
+
+/* Título h3: Centrado, bold, con espacio arriba */
+h3 {
+  margin-top: 40px; /* Espacio arriba; ajusta a 60px para más separación */
+  text-align: center; /* Centrado horizontal */
+  font-family: Arial, sans-serif; /* Fuente consistente */
+  font-weight: bolder; /* Peso bold */
+  font-size: 1.5rem; /* Tamaño; ajusta en media query para móviles */
+  color: aliceblue; /* Color claro para fondos oscuros */
+}
+
+/* Tarjeta roja: Fondo transparente, bordes y texto blanco */
+.card-rojo-transparente {
+  background-color: rgba(
+    255,
+    0,
+    0,
+    0.3
+  ); /* Rojo transparente; ajusta opacidad (0.3 a 0.5) */
+  border: 2px solid rgba(255, 0, 0, 0.7); /* Borde rojo; cambia color */
+  color: white; /* Texto blanco por defecto */
+}
+
+.card-rojo-transparente .card-header {
+  border-bottom: 2px solid rgba(255, 0, 0, 0.7); /* Línea bajo header */
+  text-align: center; /* Centrado */
+  font-weight: bold; /* Bold */
+}
+
+.card-rojo-transparente .card-body,
+.card-rojo-transparente label,
+.card-rojo-transparente input {
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Bold */
+}
+
+.card-rojo-transparente input {
+  height: 3.5rem; /* Altura; ajusta a 4rem para más grande */
+  font-size: 1.25rem; /* Tamaño de texto */
+  padding-left: 10px; /* Espacio izquierdo */
+  padding-right: 0; /* Pegado a la derecha */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  border: 1px solid white; /* Borde blanco */
+  box-sizing: border-box; /* Incluye padding en tamaño */
+  margin-bottom: 1rem; /* Espacio debajo */
+}
+
+.card-rojo-transparente .card-footer {
+  color: rgb(248, 248, 248); /* Blanco suave */
+  font-weight: bold; /* Bold */
+  text-align: center; /* Centrado */
+}
+
+/* Tarjeta azul: Similar a roja, con centrado vertical y espacio */
+.card-azul-transparente {
+  background-color: rgba(0, 0, 255, 0.3); /* Azul transparente */
+  border: 2px solid rgba(0, 0, 255, 0.7); /* Borde azul */
+  color: white; /* Texto blanco */
+}
+
+.card-azul-transparente .card-header {
+  border-bottom: 2px solid rgba(0, 0, 255, 0.7); /* Línea bajo header */
+  text-align: center; /* Centrado */
+  font-weight: bold; /* Bold */
+}
+
+.card-azul-transparente .card-body {
+  display: flex; /* Flexbox para centrado */
+  flex-direction: column; /* Vertical */
+  justify-content: center; /* Centrado vertical */
+  padding-top: 60px; /* Espacio arriba; ajusta a 30px si es mucho */
+  padding-bottom: 20px; /* Espacio abajo para balance */
+  height: 100%; /* Ocupa toda la altura */
+}
+
+.card-azul-transparente .card-body,
+.card-azul-transparente p,
+.card-azul-transparente strong,
+.card-azul-transparente span {
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Bold */
+}
+
+.card-azul-transparente p {
+  line-height: 2rem; /* Espaciado entre líneas */
+  margin-bottom: 1.5rem; /* Espacio debajo */
+}
+
+/* Espacio extra debajo del contenido en tarjeta azul (usando ::after) */
+.card-azul-transparente .card-body::after {
+  content: ""; /* Pseudo-elemento vacío */
+  display: block; /* Ocupa espacio */
+  height: 17px; /* Altura extra; ajusta para alinear con otras cards */
+}
+
+.card-azul-transparente .card-footer {
+  color: rgb(255, 255, 255); /* Blanco */
+  font-weight: bold; /* Bold */
+  text-align: center; /* Centrado */
+}
+
+/* Tarjeta verde: Fondo amarillo claro, flex para expansión */
+.card-verde-transparente {
+  background-color: rgb(255, 254, 195); /* Amarillo suave */
+  border: 2px solid rgba(128, 115, 0, 0.3); /* Borde amarillo oscuro */
+  color: white; /* Texto blanco (ajusta si contrasta mal) */
+  min-height: 400px; /* Altura mínima; ajusta para consistencia */
+  display: flex; /* Flex para distribución interna */
+  flex-direction: column; /* Vertical */
+}
+
+.card-verde-transparente .card-header {
+  border-bottom: 2px solid rgba(119, 128, 0, 0.3); /* Línea bajo header */
+  text-align: center; /* Centrado */
+  font-weight: bold; /* Bold */
+  color: black; /* Negro para contraste */
+}
+
+.card-verde-transparente .card-body {
+  flex-grow: 1; /* Expande para llenar espacio */
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Bold */
+  display: flex; /* Flex interno */
+  flex-direction: column; /* Vertical */
+}
+
+.card-verde-transparente .explanation {
+  font-size: 0.8rem; /* Tamaño pequeño */
+  margin-top: auto; /* Empuja al fondo */
+  color: rgb(34, 33, 33); /* Blanco */
+  font-weight: normal; /* No bold */
+  text-align: left; /* Alineado izquierda */
+}
+
+.card-verde-transparente .explanation strong {
+  font-weight: normal; /* No bold en strong */
+}
+
+.card-verde-transparente .card-footer {
+  color: rgb(22, 22, 22); /* Negro oscuro */
+  font-weight: bold; /* Bold */
+  text-align: center; /* Centrado */
+}
+
+/* Clase adicional para párrafos (de CSS proporcionado) */
+.paragraph-with-line-3 {
+  color: black; /* Negro; ajusta para temas claros */
+}
+
+/* Botón glow: Rojo con efecto shadow */
+.btn-glow {
+  width: 100%; /* Ancho completo */
+  margin-top: 1rem; /* Espacio arriba */
+  background-color: red; /* Fondo rojo */
+  color: white; /* Texto blanco */
+  border: 2px solid #ff4500; /* Borde naranja rojizo */
+  box-shadow: 0 0 10px #ff4500; /* Glow inicial */
+  transition: box-shadow 0.3s ease-in-out; /* Transición suave */
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 20px #ff4500; /* Glow más intenso al hover */
+}
+
+/* ==========================================
+     PIE DE PÁGINA
+     ========================================== 
+     - Responsive: Iconos se centran en móviles.
+     - Para modificar: Cambia font-size para tamaños. */
+.footer-hiperion {
+  background-color: #333; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 20px 0; /* Padding vertical */
+}
+
+.footer-logo {
+  width: 50px; /* Tamaño logo */
+}
+
+.footer-brand-title {
+  font-size: 1.2rem; /* Tamaño título */
+  font-weight: bold; /* Bold */
+}
+
+.footer-social-link {
+  color: #fff; /* Blanco */
+  font-size: 1.5rem; /* Tamaño iconos */
+  text-decoration: none; /* Sin underline */
+}
+
+.footer-social-link:hover {
+  color: #ffd700; /* Amarillo al hover */
+}
+
+.footer-copyright,
+.footer-quote {
+  font-size: 0.9rem; /* Tamaño texto */
+  margin: 5px 0; /* Espacio vertical */
+}
+
+/* ==========================================
+     MEDIA QUERIES PARA RESPONSIVIDAD
+     ========================================== 
+     - Para pantallas pequeñas (<768px): Ajusta tamaños y alineaciones para móviles.
+     - Extendido: Incluye navbar, secciones y cards para full responsividad. */
+@media (max-width: 768px) {
+  /* General: Ajusta cards a full width */
+  .card {
+    max-width: 100% !important; /* Fuerza ancho completo en móviles */
+  }
+
+  /* Navbar: Reduce tamaños */
+  .navbar-spacer {
+    height: 60px; /* Menor en móviles para ahorrar espacio */
+  }
+  .brand-title {
+    font-size: 1.2rem; /* Menor título */
+  }
+  .brand-subtitle {
+    font-size: 0.8rem; /* Menor subtítulo */
+  }
+
+  /* Simulación: Ajusta títulos y párrafos */
+  h3 {
+    font-size: 1.2rem; /* Menor en móviles */
+  }
+  .paragraph-with-line {
+    max-width: 100%; /* Full width en móviles */
+    padding-left: 10px; /* Menos indentación */
+  }
+  .paragraph-with-line p {
+    font-size: 1rem; /* Menor texto */
+  }
+
+  /* Cards: Ajusta paddings y alturas */
+  .card-rojo-transparente input {
+    height: 3rem; /* Menor altura en móviles */
+    font-size: 1rem; /* Menor texto */
+  }
+  .card-azul-transparente .card-body {
+    padding-top: 30px; /* Menos espacio arriba */
+  }
+  .card-verde-transparente {
+    min-height: 300px; /* Menor altura mínima */
+  }
+  .explanation {
+    font-size: 0.7rem; /* Menor en móviles */
+  }
+
+  /* Footer: Centra todo */
+  .footer-social {
+    justify-content: center !important; /* Centrar iconos */
+  }
+  .footer-brand-title {
+    font-size: 1rem; /* Menor título */
+  }
+}
+@media (max-width: 480px) {
+  /* Ajustes adicionales para pantallas muy pequeñas */
+  .navbar-logo {
+    width: 40px; /* Logo más pequeño */
+  }
+  .btn-glow {
+    font-size: 0.9rem; /* Texto más pequeño en botón */
+  }
+}
+/* ==========================================
+     MIS AGREGADOS
+     ========================================== */
+
+.estilo-sub {
+  color: white;
+  font-size: 15px;
+}
