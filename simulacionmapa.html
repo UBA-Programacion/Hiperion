@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- ==========================================
+         CONFIGURACIÓN BÁSICA DEL DOCUMENTO
+         ========================================== -->
+    <!-- Codificación de caracteres UTF-8 para soporte completo de caracteres especiales -->
+    <meta charset="UTF-8" />
+    <!-- Configuración del viewport para diseño responsive: ajusta al ancho del dispositivo y zoom inicial -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compatibilidad con Internet Explorer (Edge mode) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- ==========================================
+         META TAGS PARA SEO Y REDES SOCIALES
+         ========================================== -->
+    <!-- Título de la página (aparece en la pestaña del navegador) -->
+    <title>Tu Página Web Responsive | Título Descriptivo</title>
+    <!-- Descripción de la página para motores de búsqueda (máximo 160 caracteres) -->
+    <meta
+      name="description"
+      content="Descripción concisa y atractiva de tu página web que aparecerá en los resultados de búsqueda de Google"
+    />
+    <!-- Palabras clave relacionadas con el contenido de la página -->
+    <meta
+      name="keywords"
+      content="palabra1, palabra2, palabra3, responsive, web"
+    />
+    <!-- Autor del sitio web -->
+    <meta name="author" content="Tu Nombre o Empresa" />
+    <!-- Robots: Instrucciones para los motores de búsqueda (indexar y seguir enlaces) -->
+    <meta name="robots" content="index, follow" />
+    <!-- URL canónica para evitar contenido duplicado -->
+    <link rel="canonical" href="https://tudominio.com/" />
+
+    <!-- ==========================================
+         META TAGS OPEN GRAPH (FACEBOOK)
+         ========================================== -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Tu Página Web Responsive | Título para Redes Sociales"
+    />
+    <meta
+      property="og:description"
+      content="Descripción atractiva que aparecerá cuando compartan tu página en redes sociales"
+    />
+    <meta property="og:url" content="https://tudominio.com/" />
+    <meta
+      property="og:image"
+      content="https://tudominio.com/images/og-image.jpg"
+    />
+    <meta property="og:site_name" content="Nombre de tu Sitio Web" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- ==========================================
+         META TAGS TWITTER CARD
+         ========================================== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tuusuario" />
+    <meta name="twitter:creator" content="@tuusuario" />
+    <meta name="twitter:title" content="Tu Página Web Responsive" />
+    <meta name="twitter:description" content="Descripción para Twitter Card" />
+    <meta
+      name="twitter:image"
+      content="https://tudominio.com/images/twitter-image.jpg"
+    />
+
+    <!-- ==========================================
+         FAVICON Y ICONOS PARA DISPOSITIVOS
+         ========================================== -->
+    <!-- Favicon estándar (ICO format) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Favicon PNG para navegadores modernos -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- Apple Touch Icon para dispositivos iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- Icono para Android Chrome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/android-chrome-512x512.png"
+    />
+    <!-- Manifest para PWA (Progressive Web App) -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Color del tema para la barra de navegación en móviles -->
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Color de la barra de estado en Safari (iOS) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- ==========================================
+         HOJAS DE ESTILOS CSS
+         ========================================== -->
+    <!-- Bootstrap CSS desde CDN para componentes y grid responsive -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Iconos de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Hoja de estilos personalizada (actualizada con el CSS proporcionado) -->
+    <link rel="stylesheet" href="css/styles_1.css" />
+    <link rel="stylesheet" href="css/styles_2.css" />
+    <link rel="stylesheet" href="css/styles_4.css" />
+
+    <!-- ==========================================
+         PRELOAD Y PREFETCH PARA OPTIMIZACIÓN
+         ========================================== -->
+    <!-- DNS prefetch para dominios externos -->
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  </head>
+  <body>
+    <!-- ==========================================
+         NAVEGACIÓN PRINCIPAL HIPERIÓN
+         ========================================== 
+         - Fixed-top para que se quede en la parte superior.
+         - Responsive: Colapsa en móviles con botón hamburguesa. -->
+    <nav class="navbar navbar-expand-lg navbar-hiperion fixed-top">
+      <div class="container-fluid">
+        <!-- Sección izquierda: Logo y Brand -->
+        <div class="navbar-brand-container">
+          <div class="logo-container">
+            <img
+              src="assets/Hiperion.png"
+              alt="Logo HIPERIÓN"
+              class="navbar-logo"
+            />
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">HIPERIÓN</h1>
+            <p class="brand-subtitle">el supermercado que se ajusta solo</p>
+          </div>
+        </div>
+
+        <!-- Botón hamburguesa para móviles -->
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarHiperion"
+          aria-controls="navbarHiperion"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon-custom"
+            ><i class="bi bi-list"></i
+          ></span>
+        </button>
+
+        <!-- Sección derecha: Menú de navegación -->
+        <div class="collapse navbar-collapse" id="navbarHiperion">
+          <ul class="navbar-nav ms-auto">
+            <!-- Botón Video -->
+            <li class="nav-item">
+              <a class="nav-link nav-btn-custom" href="video.html"
+                ><i class="bi bi-play-circle nav-icon"></i
+                ><span class="nav-text">Video</span></a
+              >
+            </li>
+            <!-- Dropdown Simulación -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle nav-btn-custom"
+                href="#"
+                id="simulacionDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-gear nav-icon"></i
+                ><span class="nav-text">Simulación</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-custom"
+                aria-labelledby="simulacionDropdown"
+              ><li>
+                <a class="dropdown-item" href="simulacionbasica.html"
+                  ><i class="bi bi-calculator"></i> Simulación Básica</a
+                >
+              </li>
+                <li>
+                  <a class="dropdown-item" href="simulacioncompleja.html"
+                    ><i class="bi bi-cpu"></i> Simulación Avanzada</a
+                  >
+                </li>
+                
+                <li><hr class="dropdown-divider" /></li>
+              </ul>
+            </li>
+            <!-- Botón Contacto -->
+            <li class="nav-item">
+              <a class="nav-link nav-btn-custom" href="index.html#contacto"
+                ><i class="bi bi-envelope nav-icon"></i
+                ><span class="nav-text">Contacto</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Espaciador para compensar navbar fixed (evita solapamiento con contenido) -->
+    <div class="navbar-spacer"></div>
+
+    <!-- Contenido principal: Sección de simulación responsive -->
+    <main class="features-section-3">
+        <!-- Título principal con formato en negrita -->
+        <h3 class="main-title">Optimización de Layout con Mapas de Calor</h3>
+  
+        <!-- Párrafo con línea azul lateral -->
+        <div class="paragraph-with-line">
+          <p style="color: aliceblue">
+            Experimente cómo los mapas de calor y la analítica de trayectorias de
+            HIPERIÓN pueden mejorar la visibilidad y la conversión en su tienda.
+          </p>
+        </div>
+  
+        <!-- Contenedor para notificaciones Toast -->
+        <div id="toastContainer" class="toast-container"></div>
+        <!-- Tarjeta principal de la simulación -->
+        <div class="simulation-card">
+          <!-- Contenido principal de la simulación -->
+          <div class="simulation-content">
+            <!-- Panel de controles -->
+            <div class="controles">
+              <p>
+                <strong>Colocar hasta dos productos por zona </br> .</strong>
+              </p>
+  
+              <!-- Paleta de productos arrastrables -->
+              <div class="product-palette">
+                <div
+                  class="draggable-product product-violet"
+                  data-product="KVI-1"
+                  data-type="KVI"
+                  draggable="true"
+                >
+                  KVI 1
+                </div>
+                <div
+                  class="draggable-product product-blue"
+                  data-product="Normal-1"
+                  data-type="Normal"
+                  draggable="true"
+                >
+                  Normal
+                </div>
+                <div
+                  class="draggable-product product-gray"
+                  data-product="KVI-2"
+                  data-type="KVI"
+                  draggable="true"
+                >
+                  KVI 2
+                </div>
+                <div
+                  class="draggable-product product-orange"
+                  data-product="KVI-2"
+                  data-type="KVI"
+                  draggable="true"
+                >
+                  Especial
+                </div>
+              </div>
+  
+              <!-- Botones de acción con estilos específicos -->
+              <button id="simulateTraffic" class="btn-simulate">
+                Simular Tráfico
+              </button>
+              <button id="resetSimulation" class="btn-reset">
+                Resetear Simulación
+              </button>
+              <button id="optimizePlanogram" class="btn-optimize">
+                Optimizar Planograma
+              </button>
+            </div>
+  
+            <!-- Panel de resultados -->
+            <div class="results">
+              <!-- Layout del pasillo con zonas de calor -->
+              <div id="aisleLayout" class="aisle-layout">
+                <div class="aisle-zone" data-zone="zone1" data-heat="low">
+                  Zona 1
+                </div>
+                <div class="aisle-zone" data-zone="zone2" data-heat="medium">
+                  Zona 2
+                </div>
+                <div class="aisle-zone" data-zone="zone3" data-heat="high">
+                  Zona 3
+                </div>
+                <div class="aisle-zone" data-zone="zone4" data-heat="medium">
+                  Zona 4
+                </div>
+              </div>
+  
+              <!-- Indicador de conversión estimada -->
+              <p style="color:rgb(0, 0, 0)">
+                <strong>Conversión Estimada:</strong>
+                <span id="estimatedConversion"><strong>0%</strong></span>
+              </p>
+  
+              <!-- Explicación con línea lateral azul -->
+              <p class="explanation">
+                Las zonas rojas indican alta permanencia (zonas calientes). La
+                optimización sugiere mover productos clave a estas áreas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    <!-- ==========================================
+         PIE DE PÁGINA HIPERIÓN
+         ========================================== 
+         - Responsive: Alinea elementos en columnas en móviles. -->
+    <footer class="footer-hiperion">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <!-- Sección izquierda: Logo y Brand -->
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="footer-brand-container">
+              <div class="footer-logo-container">
+                <img
+                  src="assets/Hiperion.png"
+                  alt="Logo HIPERIÓN"
+                  class="footer-logo"
+                />
+              </div>
+              <div class="footer-brand-text">
+                <h3 class="footer-brand-title">HIPERIÓN</h3>
+              </div>
+            </div>
+          </div>
+          <!-- Sección derecha: Redes Sociales -->
+          <div class="col-md-4 text-md-end">
+            <div
+              class="footer-social d-flex justify-content-center justify-content-md-end gap-3"
+            >
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Copyright -->
+        <div class="row mt-4">
+          <div class="col text-center">
+            <p class="footer-copyright">
+              © 4045 HIPERIÓN - Todos los derechos reservados.
+            </p>
+            <p class="footer-quote">
+              "El futuro no es esperar clientes, es anticipar cada compra"
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript (incluye Popper.js para tooltips/popovers) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Chart.js para el gráfico -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Script personalizado -->
+    <script src="js/scripts_4.js"></script>
+  </body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- ==========================================
+         CONFIGURACIÓN BÁSICA DEL DOCUMENTO
+         ========================================== -->
+    <!-- Codificación de caracteres UTF-8 para soporte completo de caracteres especiales -->
+    <meta charset="UTF-8" />
+    <!-- Configuración del viewport para diseño responsive: ajusta al ancho del dispositivo y zoom inicial -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compatibilidad con Internet Explorer (Edge mode) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- ==========================================
+         META TAGS PARA SEO Y REDES SOCIALES
+         ========================================== -->
+    <!-- Título de la página (aparece en la pestaña del navegador) -->
+    <title>Tu Página Web Responsive | Título Descriptivo</title>
+    <!-- Descripción de la página para motores de búsqueda (máximo 160 caracteres) -->
+    <meta
+      name="description"
+      content="Descripción concisa y atractiva de tu página web que aparecerá en los resultados de búsqueda de Google"
+    />
+    <!-- Palabras clave relacionadas con el contenido de la página -->
+    <meta
+      name="keywords"
+      content="palabra1, palabra2, palabra3, responsive, web"
+    />
+    <!-- Autor del sitio web -->
+    <meta name="author" content="Tu Nombre o Empresa" />
+    <!-- Robots: Instrucciones para los motores de búsqueda (indexar y seguir enlaces) -->
+    <meta name="robots" content="index, follow" />
+    <!-- URL canónica para evitar contenido duplicado -->
+    <link rel="canonical" href="https://tudominio.com/" />
+
+    <!-- ==========================================
+         META TAGS OPEN GRAPH (FACEBOOK)
+         ========================================== -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Tu Página Web Responsive | Título para Redes Sociales"
+    />
+    <meta
+      property="og:description"
+      content="Descripción atractiva que aparecerá cuando compartan tu página en redes sociales"
+    />
+    <meta property="og:url" content="https://tudominio.com/" />
+    <meta
+      property="og:image"
+      content="https://tudominio.com/images/og-image.jpg"
+    />
+    <meta property="og:site_name" content="Nombre de tu Sitio Web" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- ==========================================
+         META TAGS TWITTER CARD
+         ========================================== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tuusuario" />
+    <meta name="twitter:creator" content="@tuusuario" />
+    <meta name="twitter:title" content="Tu Página Web Responsive" />
+    <meta name="twitter:description" content="Descripción para Twitter Card" />
+    <meta
+      name="twitter:image"
+      content="https://tudominio.com/images/twitter-image.jpg"
+    />
+
+    <!-- ==========================================
+         FAVICON Y ICONOS PARA DISPOSITIVOS
+         ========================================== -->
+    <!-- Favicon estándar (ICO format) -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Favicon PNG para navegadores modernos -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- Apple Touch Icon para dispositivos iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- Icono para Android Chrome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/android-chrome-512x512.png"
+    />
+    <!-- Manifest para PWA (Progressive Web App) -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Color del tema para la barra de navegación en móviles -->
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Color de la barra de estado en Safari (iOS) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- ==========================================
+         HOJAS DE ESTILOS CSS
+         ========================================== -->
+    <!-- Bootstrap CSS desde CDN para componentes y grid responsive -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Iconos de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Hoja de estilos personalizada (actualizada con el CSS proporcionado) -->
+    <link rel="stylesheet" href="css/styles_1.css" />
+    <link rel="stylesheet" href="css/styles_2.css" />
+    <link rel="stylesheet" href="css/styles_3.css" />
+
+    <!-- ==========================================
+         PRELOAD Y PREFETCH PARA OPTIMIZACIÓN
+         ========================================== -->
+    <!-- DNS prefetch para dominios externos -->
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  </head>
+  <body>
+    <!-- ==========================================
+         NAVEGACIÓN PRINCIPAL HIPERIÓN
+         ========================================== 
+         - Fixed-top para que se quede en la parte superior.
+         - Responsive: Colapsa en móviles con botón hamburguesa. -->
+    <nav class="navbar navbar-expand-lg navbar-hiperion fixed-top">
+      <div class="container-fluid">
+        <!-- Sección izquierda: Logo y Brand -->
+        <div class="navbar-brand-container">
+          <div class="logo-container">
+            <img
+              src="assets/Hiperion.png"
+              alt="Logo HIPERIÓN"
+              class="navbar-logo"
+            />
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">HIPERIÓN</h1>
+            <p class="brand-subtitle">el supermercado que se ajusta solo</p>
+          </div>
+        </div>
+
+        <!-- Botón hamburguesa para móviles -->
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarHiperion"
+          aria-controls="navbarHiperion"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon-custom"
+            ><i class="bi bi-list"></i
+          ></span>
+        </button>
+
+        <!-- Sección derecha: Menú de navegación -->
+        <div class="collapse navbar-collapse" id="navbarHiperion">
+          <ul class="navbar-nav ms-auto">
+            <!-- Botón Video -->
+            <li class="nav-item">
+              <a class="nav-link nav-btn-custom" href="video.html"
+                ><i class="bi bi-play-circle nav-icon"></i
+                ><span class="nav-text">Video</span></a
+              >
+            </li>
+            <!-- Dropdown Simulación -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle nav-btn-custom"
+                href="#"
+                id="simulacionDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-gear nav-icon"></i
+                ><span class="nav-text">Simulación</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-custom"
+                aria-labelledby="simulacionDropdown"
+              >
+              <li>
+                <a class="dropdown-item" href="simulacionbasica.html"
+                  ><i class="bi bi-calculator"></i> Simulación Básica</a
+                >
+              </li>
+                <li>
+                  <a class="dropdown-item" href="simulacionmapa.html"
+                    ><i class="bi bi-bar-chart"></i> Comparador de Precios</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+              </ul>
+            </li>
+            <!-- Botón Contacto -->
+            <li class="nav-item">
+              <a class="nav-link nav-btn-custom" href="index.html#contacto"
+                ><i class="bi bi-envelope nav-icon"></i
+                ><span class="nav-text">Contacto</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Espaciador para compensar navbar fixed (evita solapamiento con contenido) -->
+    <div class="navbar-spacer"></div>
+
+    <!-- Contenido principal: Sección de simulación responsive -->
+    <main class="main-content features-section-2">
+      <!-- Sección de simulación con fondo negro. Responsive: Ajusta grids en móviles. -->
+      <div class="simulation-bg">
+        <h3>Simulación de Optimización de Surtido y Precios (Regla 80/20)</h3>
+        <div class="paragraph-with-line">
+          <p class="estilo-sub">
+            Observe cómo HIPERIÓN optimiza una cesta de productos, asignando
+            pesos y ajustando precios para mantener el equilibrio deseado y
+            priorizar los SKUs de mayor valor según los principios de balanceo
+            automatizado.
+          </p>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center g-4">
+            <!-- Tarjeta de Configuración Inicial -->
+            <div class="col-12 col-md-6">
+                <div class="card card-rojo-transparente mb-3 w-100">
+                  <div class="card-header">🎛️ Controles de Simulación</div>
+                  <div class="card-body">
+                    <!-- Seleccionar Categoría: Centrada con círculo amarillo -->
+                    <div class="custom-label centered">
+                      <span class="status-indicator status-yellow"></span>
+                      Seleccionar Categoría:
+                    </div>
+  
+                    <!-- Dropdown rosadito -->
+                    <select id="categorySelect" class="dropdown-pink">
+                      <option value="lacteos">🥛 Lácteos</option>
+                      <option value="bebidas">🥤 Bebidas</option>
+                      <option value="carnes">🥩 Carnes</option>
+                      <option value="panaderia">🍞 Panadería</option>
+                      <option value="verdura">🌶️ Verduras</option>
+                    </select>
+  
+                    <!-- Espacio y Cargando productos: Centrado -->
+                    <div class="spacer"></div>
+                    <div id="productTableContainer" class="centered">
+                      <div class="loading">Cargando productos...</div>
+                    </div>
+  
+                    <!-- Espacio adicional entre Cargando y Simular Venta -->
+                    <div class="spacer-large"></div>
+  
+                    <!-- Simular Venta: Centrada con puntito naranja -->
+                    <div class="custom-label centered">
+                      <span class="status-indicator status-yellow"></span>
+                      Simular Venta:
+                    </div>
+  
+                    <!-- Dropdown de abajo: Rosadito y full-width -->
+                    <select
+                      id="balancerTradeProduct"
+                      class="dropdown-pink dropdown-full"
+                    >
+                      <option value="">Seleccione un producto...</option>
+                    </select>
+  
+                    <!-- Espacio antes de Cantidad a Vender -->
+                    <div class="spacer"></div>
+  
+                    <!-- Cantidad a Vender: Centrada con indicador warning -->
+                    <div class="custom-label centered">
+                      <span class="status-indicator status-yellow"></span>
+                      Cantidad a Vender:
+                    </div>
+                    <input
+                      type="number"
+                      id="balancerTradeAmount"
+                      value="10"
+                      min="1"
+                      max="100"
+                      step="1"
+                      class="input-number"
+                    />
+  
+                    <!-- Espacio adicional entre input y botones -->
+                    <div class="spacer-large"></div>
+  
+                    <!-- Dos botones abajo: Verde neón y gris neón -->
+                    <div class="button-group">
+                      <button id="simulateBalancer" class="btn-neon-green">
+                        🚀 Ejecutar Optimización
+                      </button>
+                      <button id="resetBalancer" class="btn-neon-blue">
+                        🔄 Resetear Simulación
+                      </button>
+                    </div>
+                  </div>
+                  
+                    
+                  </div>
+  
+                  
+                </div>
+            <div class="col-12 col-md-6">
+              <div class="card card-azul-transparente mb-3 w-100">
+                <div class="card-header">📊 Resultados de la Optimización</div>
+                <div class="card-body">
+                  <!-- Seleccionar Categoría: Centrada con círculo amarillo -->
+                  <div id="balancerMetrics" class="d-flex gap-3">
+                    <div class="metric-card flex-1">
+                      <h5>Invariante Total</h5>
+                      <span id="totalInvariant" style="color: #000;">0</span>
+                    </div>
+                  
+                  <div class="metric-card flex-1">
+                    <h5>Valor Total Cesta</h5>
+                    <span id="totalBasketValue" style="color: #000;">$0</span>
+                  </div>
+                  <div class="metric-card flex-1">
+                    <h5>Productos Activos</h5>
+                    <span id="activeProducts" style="color:#000">0</span>
+                  </div>
+                </div>
+                </div>
+                <div class="chart-container">
+                  <canvas id="balancerChart"></canvas>
+                </div>
+                <div class="card-footer">
+                    <p class="explanation" style="text-align: left; color:rgb(255, 255, 255); font-size: 0.9em; font-weight: normal;">
+                        💡 <strong>Explicación del Algoritmo:</strong> El sistema HIPERIÓN utiliza un mecanismo de balanceo que ajusta dinámicamente los precios basándose en la disponibilidad de inventario, prioridad estratégica y demanda del mercado. Cuando se realizan ventas, el algoritmo recalcula los factores de escasez y rebalancea la cesta para mantener la rentabilidad y disponibilidad óptimas.
+                        
+                      </p>
+                </div>
+                  
+                </div>
+                
+                  
+                </div>
+
+                
+              </div>
+            </div>
+            <div class="col-12 col-md-6"></div>
+            <div class="col-12 col-md-6"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ==========================================
+         PIE DE PÁGINA HIPERIÓN
+         ========================================== 
+         - Responsive: Alinea elementos en columnas en móviles. -->
+    <footer class="footer-hiperion">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <!-- Sección izquierda: Logo y Brand -->
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="footer-brand-container">
+              <div class="footer-logo-container">
+                <img
+                  src="assets/Hiperion.png"
+                  alt="Logo HIPERIÓN"
+                  class="footer-logo"
+                />
+              </div>
+              <div class="footer-brand-text">
+                <h3 class="footer-brand-title">HIPERIÓN</h3>
+              </div>
+            </div>
+          </div>
+          <!-- Sección derecha: Redes Sociales -->
+          <div class="col-md-4 text-md-end">
+            <div
+              class="footer-social d-flex justify-content-center justify-content-md-end gap-3"
+            >
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="footer-social-link"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- Copyright -->
+        <div class="row mt-4">
+          <div class="col text-center">
+            <p class="footer-copyright">
+              © 4045 HIPERIÓN - Todos los derechos reservados.
+            </p>
+            <p class="footer-quote">
+              "El futuro no es esperar clientes, es anticipar cada compra"
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript (incluye Popper.js para tooltips/popovers) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Chart.js para el gráfico -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Script personalizado -->
+    <script src="js/scripts_3.js"></script>
+  </body>
+</html>
